@@ -10,20 +10,20 @@ export class Network {
 
     if (regex.test(url)) {
        console.log(body, method, url);
-       
+
        const server = new Server()
        
        switch(method){
         case 'GET':
-            server.GET();
+            server.GET(url);
             break
         case "POST":
-            server.POST(body);
+            server.POST(url,body);
             break;
         case "DELETE":
-            server.DELETE();
+            server.DELETE(url);
         case "PUT":
-            server.PUT(body)
+            server.PUT(url,body)
        }
     } else {
      console.log("404")

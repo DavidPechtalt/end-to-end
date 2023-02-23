@@ -7,7 +7,7 @@ export class FXMLhttprequest{
     };
     open(method, url){
         this.method = method;
-        this.url = url
+        this.url = url;
     };
     send(body) {
         const network = new Network();
@@ -17,5 +17,5 @@ export class FXMLhttprequest{
 }
 
 const demo = new FXMLhttprequest();
-demo.open('GET', 'server.js/dudu/food/monday');
-demo.send()
+demo.open('POST', 'server.js/dudu/sunday');
+demo.send('BURGER')

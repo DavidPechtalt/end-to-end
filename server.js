@@ -2,11 +2,15 @@
 
 
 export class Server{
-    GET(){
-        alert('hello')
+    GET(url){
+        
     };
-    POST(url){};
-    PUT(){};
-    DELETE(){};
+    POST(url,body){
+        const parts = url.split('/');
+        const person = parts[1];
+        const day = parts[2];
+    };
+    PUT(url){};
+    DELETE(body){};
 
 }
