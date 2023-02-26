@@ -1,33 +1,29 @@
 import { Server } from "./server.js";
 
 export class Network {
-
-  pass(body, method, url) {
-
-
+  static pass(body, method, url) {
     const regex = /server\.js/;
 
-
     if (regex.test(url)) {
-       console.log(body, method, url);
+      console.log(body, method, url);
 
-       const server = new Server()
-       
-       switch(method){
-        case 'GET':
-            server.GET(url);
-            break
+      switch (method) {
+        case "GET":
+          return Server.GET(url);
+          break;
         case "POST":
-            server.POST(url,body);
-            break;
+          return Server.POST(url, body);
+          break;
         case "DELETE":
-            server.DELETE(url);
+          return Server.DELETE(url);
         case "PUT":
-            server.PUT(url,body)
-       }
+          return Server.PUT(url, body);
+      }
     } else {
-     console.log("404")
+     return{
+      status: 404,
+      response: 'faild'
+     }
     }
-   
   }
 }
