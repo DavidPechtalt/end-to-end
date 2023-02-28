@@ -9,13 +9,11 @@ export class Network {
 
       switch (method) {
         case "GET":
-          return Server.GET(url);
-          break;
+          return Server.GET(url, body);
         case "POST":
           return Server.POST(url, body);
-          break;
         case "DELETE":
-          return Server.DELETE(url);
+          return Server.DELETE(url, body);
         case "PUT":
           return Server.PUT(url, body);
       }

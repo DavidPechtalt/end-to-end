@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./registration.css" />
+    <style>
+      body {
+        text-align: center;
+      }
+      table {
+        display: inline-block;
+      }
+      .login, .main{
+        display: none;
+      }
+      
+    </style>
+    <title>Contacts List</title>
+  </head>
+  <body>
+    <!-- REGISTER -->
+    <div class="register" >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="card">
+              <h2 class="card-title text-center">Create Account</h2>
+              <div class="card-body py-md-4">
+                <form _lpchecked="1">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rname"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="remail"
+                      placeholder="Email"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="rpassword"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="rconfirm-password"
+                      placeholder="confirm-password"
+                    />
+                  </div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <a href="#" id="moveToLogin">Login</a>
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LOGIN-->
+    <div class="login">
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-5">
+                <div class="card">
+                  <h2 class="card-title text-center">Log In</h2>
+                  <div class="card-body py-md-4">
+                    <form _lpchecked="1">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Name"
+                        />
+                      </div>
+                      
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="confirm-password"
+                          placeholder="confirm-password"
+                        />
+                      </div>
+                      <div
+                        class="d-flex flex-row align-items-center justify-content-between"
+                      >
+                        <a href="#">Create Account</a>
+                        <button class="btn btn-primary">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="main">
+      <h1>Name:</h1>
+      <!-- Searching a contant -->
+      <div class="search">
+        <h2>Search A Contant</h2>
+        <div class="input">
+          <input type="text" />
+          <button>Search</button>
+        </div>
+      </div>
+      <!-- div of conntacts list -->
+      <div class="contactsList">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Adrress</th>
+          </tr>
+        </table>
+      </div>
+      <!-- div of one contant details -->
+      <div class="oneContant"></div>
+      <!-- div of enter a new contant -->
+      <div class="new"></div>
+      <div class="buttons">
+        <button>sign-out</button> <button>get all contacts</button>
+        <button>enter new contant</button>
+      </div>
+    </div>
+  </body>
+  <script src="frontEnd.js" defer type="module"></script>
+</html>
